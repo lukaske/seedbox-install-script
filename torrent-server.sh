@@ -2,7 +2,6 @@
 #!/bin/sh
 sudo mkdir /home/seedbox
 sudo adduser --disabled-password --system --home /home/seedbox/deluge --group seedbox
-sudo useradd seedbox -m -s /bin/bash
 su --shell /bin/bash --login seedbox
 sudo apt-get update  # To get the latest package lists
 sudo apt-get install python deluged deluge-webui deluge-console -y
