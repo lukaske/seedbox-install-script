@@ -3,7 +3,7 @@ sudo mkdir /home/seedbox
 sudo adduser --disabled-password --system --home /home/seedbox --group seedbox
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC
 echo "deb http://apt.sonarr.tv/ master main" | sudo tee /etc/apt/sources.list.d/sonarr.list
-#sudo apt-get update  # To get the latest package lists
+sudo apt-get update 
 sudo apt-get install python deluged deluge-webui deluge-console -y
 sudo touch /var/log/deluged.log
 sudo touch /var/log/deluge-web.log
