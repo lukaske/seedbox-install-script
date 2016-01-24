@@ -1,6 +1,5 @@
 # torrent-server-setup-script
 
-This Script is currently non-functional!!
    I made this script to quickly deploy a fully functional seedbox on a VPS for my needs.
 
    The script will create a user: seedbox for config files and install and configure the following applications. Most of the configuration takes place within the webUIs of each application.
@@ -32,6 +31,3 @@ start/stop Couchpotato
    
 Sonarr
    http://localhost:8989
-
-Plex Reqests
-   http://localhost:8181
