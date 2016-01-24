@@ -9,6 +9,8 @@ Tested on Ubuntu 14.04.3
 
 To run:
 git clone git://github.com/ak-rex/torrent-server-setup-script.git
+cd torrent-server-setup-script
+./install.sh
 *root is needed
 
 Deluge-console
