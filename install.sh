@@ -1,7 +1,7 @@
  
 #!/bin/sh
 sudo mkdir /home/seedbox
-sudo adduser --disabled-password --system --home /home/seedbox/deluge --group seedbox
+sudo adduser --disabled-password --system --home /home/seedbox --group seedbox
 #sudo apt-get update  # To get the latest package lists
 sudo apt-get install python deluged deluge-webui deluge-console -y
 sudo touch /var/log/deluged.log
@@ -18,7 +18,7 @@ sudo mkdir /home/seedbox/.couchpotato
 sudo git clone git://github.com/RuudBurger/CouchPotatoServer.git /home/seedbox/.couchpotato
 sudo cp /home/seedbox/.couchpotato/init/ubuntu /etc/init.d/couchpotato
 sudo chmod +x /etc/init.d/couchpotato
-#sudo nano home/seedbox/.couchpotato/init/ubuntu.default
-#sudo cp home/seedbox/.couchpotato/init/ubuntu.default /etc/default/couchpotato
-sudo chmod +x /etc/default/couchpotato
-sudo update-rc.d couchpotato defaults
+#sudo cp home/seedbox/.couchpotato/init/ubuntu.default /etc/default/couchpotato # Need to make the config file
+#sudo chmod +x /etc/default/couchpotato
+#sudo update-rc.d couchpotato defaults
+#sudo reboot now
