@@ -18,7 +18,7 @@ sudo mkdir /home/seedbox/.couchpotato
 sudo git clone git://github.com/RuudBurger/CouchPotatoServer.git /home/seedbox/.couchpotato
 sudo cp /home/seedbox/.couchpotato/init/ubuntu /etc/init.d/couchpotato
 sudo chmod +x /etc/init.d/couchpotato
-#sudo cp home/seedbox/.couchpotato/init/ubuntu.default /etc/default/couchpotato # Need to make the config file
-#sudo chmod +x /etc/default/couchpotato
-#sudo update-rc.d couchpotato defaults
+sudo cp home/seedbox/.couchpotato/init/ubuntu.default /etc/default/couchpotato
+sudo chmod +x /etc/default/couchpotato
+sudo update-rc.d couchpotato defaults
 #sudo reboot now

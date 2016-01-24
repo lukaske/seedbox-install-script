@@ -1,0 +1,7 @@
+# COPY THIS FILE TO /etc/default/couchpotato
+# OPTIONS: CP_HOME, CP_USER, CP_DATA, CP_PIDFILE, PYTHON_BIN, CP_OPTS, SSD_OPTS
+
+CP_HOME=/home/seedbox/.couchpotato/
+CP_DATA=/home/seedbox/.couchpotato/
+CP_USER=seedbox
+CP_PIDFILE=/home/seedbox/.couchpotato/couchpotato.pid

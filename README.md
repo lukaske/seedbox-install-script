@@ -24,6 +24,9 @@ Deluge-web
    
 Couchpotato
    http://localhost:5050
+start/stop Couchpotato
+   sudo /etc/init.d/couchpotato start
+   sudo /etc/init.d/couchpotato stop
    
 Sonarr
    http://localhost:8989
