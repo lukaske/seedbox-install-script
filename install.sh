@@ -8,7 +8,6 @@ sudo apt-get install python deluged deluge-webui deluge-console nzbdrone -y
 sudo touch /var/log/deluged.log
 sudo touch /var/log/deluge-web.log
 sudo chown seedbox:seedbox /var/log/deluge*
-sudo chmod -R 777 /home/seedbox
 sudo mkdir /home/seedbox/.config
 sudo mkdir /home/seedbox/.config/deluge
 sudo cp auth /home/seedbox/.config/deluge
@@ -24,4 +23,5 @@ sudo cp ubuntu.default /etc/default/couchpotato
 sudo chmod +x /etc/default/couchpotato
 sudo update-rc.d couchpotato defaults
 sudo cp nzbdrone.conf /etc/init/
+sudo chmod -R 777 /home/seedbox
 sudo reboot now
