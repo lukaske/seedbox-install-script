@@ -1,7 +1,7 @@
- 
 #!/bin/sh
 sudo mkdir /home/seedbox
-sudo adduser --disabled-password --system --home /home/seedbox --group seedbox
+sudo adduser --disabled-password --system --home /home/seedbox --group seedboxsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC
+echo "deb http://apt.sonarr.tv/ master main" | sudo tee /etc/apt/sources.list.d/sonarr.list
 #sudo apt-get update  # To get the latest package lists
 sudo apt-get install python deluged deluge-webui deluge-console -y
 sudo touch /var/log/deluged.log
@@ -18,7 +18,9 @@ sudo mkdir /home/seedbox/.couchpotato
 sudo git clone git://github.com/RuudBurger/CouchPotatoServer.git /home/seedbox/.couchpotato
 sudo cp /home/seedbox/.couchpotato/init/ubuntu /etc/init.d/couchpotato
 sudo chmod +x /etc/init.d/couchpotato
-sudo cp home/seedbox/.couchpotato/init/ubuntu.default /etc/default/couchpotato
+sudo cp ubuntu.default /etc/default/couchpotato
 sudo chmod +x /etc/default/couchpotato
 sudo update-rc.d couchpotato defaults
-#sudo reboot now
+sudo apt-get install nzbdrone
+sudo cp nzbdrone.conf /etc/init/
+sudo reboot now
