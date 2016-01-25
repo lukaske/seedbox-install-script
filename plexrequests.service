@@ -1,0 +1,15 @@
+ 
+[Unit]
+Description=PlexRequest
+After=network.target
+
+[Service]
+User=seedbox 
+Type=simple
+WorkingDirectory=/opt/plexrequests
+ExecStart=/usr/local/bin/meteor
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

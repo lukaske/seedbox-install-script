@@ -23,5 +23,9 @@ sudo cp ubuntu.default /etc/default/couchpotato
 sudo chmod +x /etc/default/couchpotato
 sudo update-rc.d couchpotato defaults
 sudo cp nzbdrone.conf /etc/init/
+sudo curl https://install.meteor.com/ | sh
+sudo git clone https://github.com/lokenx/plexrequests-meteor.git /opt/
+sudo chown -R seedbox:seedbox /opt/plexrequests
+sudo cp plexrequests.service /etc/systemd/system
 sudo chmod -R 777 /home/seedbox
 sudo reboot now
