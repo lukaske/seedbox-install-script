@@ -14,6 +14,7 @@ sudo su - seedbox -c deluge-console "config -s allow_remote True"
 sudo su - seedbox -c deluge-console "config allow_remote"
 sudo cp deluged.conf /etc/init/deluged.conf
 sudo cp deluge-web.conf /etc/init/deluge-web.conf
+sudo rm /home/seedbox/.config/deluge/auth
 sudo cp auth /home/seedbox/.config/deluge
 sudo mkdir /home/seedbox/.couchpotato
 sudo git clone git://github.com/RuudBurger/CouchPotatoServer.git /home/seedbox/.couchpotato
