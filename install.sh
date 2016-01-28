@@ -12,6 +12,7 @@ sudo mkdir /home/seedbox/.config
 sudo mkdir /home/seedbox/.config/deluge
 sudo cp deluged.conf /etc/init/deluged.conf
 sudo cp deluge-web.conf /etc/init/deluge-web.conf
+sudo service deluged start
 sudo service deluged stop
 sudo echo "seedbox:seedbox:10" >> /home/seedbox/.config/deluge/auth
 sudo su - seedbox -c deluge-console "config -s allow_remote True"
