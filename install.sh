@@ -10,10 +10,8 @@ sudo touch /var/log/deluge-web.log
 sudo chown seedbox:seedbox /var/log/deluge*
 sudo mkdir /home/seedbox/.config
 sudo mkdir /home/seedbox/.config/deluge
-sudo -u seedbox -c deluge-console "config -s allow_remote True"
-sudo -u seedbox -c deluge-console "config allow_remote"
-#sudo su - seedbox -c deluge-console "config -s allow_remote True"
-#sudo su - seedbox -c deluge-console "config allow_remote"
+sudo su - seedbox -c deluge-console "config -s allow_remote True"
+sudo su - seedbox -c deluge-console "config allow_remote"
 sudo cp deluged.conf /etc/init/deluged.conf
 sudo cp deluge-web.conf /etc/init/deluge-web.conf
 sudo echo "seedbox:seedbox:10" >> /home/seedbox/.config/deluge/auth
