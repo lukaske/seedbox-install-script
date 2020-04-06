@@ -3,8 +3,8 @@ mkdir /home/seedbox
 adduser --disabled-password --system --home /home/seedbox --group seedbox
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC
 echo "deb http://apt.sonarr.tv/ master main" | tee /etc/apt/sources.list.d/sonarr.list
-apt-get update 
-apt-get install python deluged deluge-webui deluge-console nzbdrone -y
+apt-get --allow-unauthenticated update 
+apt-get --allow-unauthenticated install python deluged deluge-webui deluge-console nzbdrone -y
 touch /var/log/deluged.log
 touch /var/log/deluge-web.log
 chown seedbox:seedbox /var/log/deluge*
@@ -26,3 +26,5 @@ chmod +x /etc/default/couchpotato
 update-rc.d couchpotato defaults
 cp nzbdrone.conf /etc/init
 chmod -R 777 /home/seedbox
+
+https://github.com/lukaske/seedbox-install-script.git
